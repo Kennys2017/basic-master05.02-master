@@ -1,5 +1,4 @@
 <?php
-
 use app\models\Category;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -12,22 +11,25 @@ use yii\grid\GridView;
 
 $this->title = 'Административная панель';
 ?>
-<div class="category-index">
+<div class="category-index" >
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Управление пользователями', ['/user']) ?>
+    <div style="display:flex; flex-direction:column; width:300px;">
+   <button  class="btn btn-success" style=" margin-top:20px"> <p >
+        <?= Html::a('Управление пользователями', ['/user'],  ['style' => 'text-decoration:none; color:white; font-weight:450']) ?>
     </p>
-    <p>
-        <?= Html::a('Управление товарами', ['/product']) ?>
+    </button>
+    <button  class="btn btn-success" style=" margin-top:20px"> <p>
+        <?= Html::a('Управление товарами', ['/product'],  ['style' => 'text-decoration:none; color:white; font-weight:450']) ?>
     </p>
-    <p>
-        <?= Html::a('Управление категориями', ['/category']) ?>
+        </button>
+        <button  class="btn btn-success" style=" margin-top:20px"> <p>
+        <?= Html::a('Управление категориями', ['/category'],  ['style' => 'text-decoration:none; color:white; font-weight:450']) ?>
     </p>
-    <p>
-        <?= Html::a('Управление заказами', ['/order']) ?>
+    </button>
+    <button  class="btn btn-success" style=" margin-top:20px"> <p>
+        <?= Html::a('Управление заказами', ['/order'],  ['style' => 'text-decoration:none; color:white; font-weight:450']) ?>
     </p>
-
-
+</button>
+    <div>
 </div>

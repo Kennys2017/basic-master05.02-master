@@ -63,8 +63,18 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $post = Product::find()->orderBy(['created_at' =>SORT_DESC])->limit(8)->all();
+        $item = Product::find()->andWhere(['id_category' => [3] ])->all();
+        $helmet =  Product::find()->andWhere(['id_category' => [4] ])->all();
+        $scope =  Product::find()->andWhere(['id_category' => [2] ])->all();
+        $camouflage =  Product::find()->andWhere(['id_category' => [1] ])->all();
+        $playecarier =  Product::find()->andWhere(['id_category' => [5] ])->all();
         return $this->render('index', [
             'post' => $post,
+            'item'=>$item,
+            'helmet'=>$helmet,
+            'scope'=>$scope,
+            'camouflage'=>$camouflage,
+            'playecarier' => $playecarier,
         ]);
     }
 

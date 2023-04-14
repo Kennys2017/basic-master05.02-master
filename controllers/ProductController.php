@@ -58,7 +58,10 @@ class ProductController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
-    {
+    {   
+        // $product = Product::findOne($id);
+        // $product = Product::find()->with('category')->where(['id'=> $id])->limit(1)->one();
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
